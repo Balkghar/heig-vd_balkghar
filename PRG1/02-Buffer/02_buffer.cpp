@@ -20,15 +20,15 @@ int main() {
    char     s;
 
    // justifier ce que vaut le buffer après CHAQUNE des instructions
-   cout << "entrer des valeurs : ";
-   cin.ignore(numeric_limits<streamsize>::max(), '\n');
-   cout << endl;
-   cin >> a;
-   cin >> b;
-   cin.ignore(numeric_limits<streamsize>::max(), '\n');
-   cin >> x;
-   cin >> y;
-   cout << "voulez-vous sauver [o/n] : ";
+   cout << "entrer des valeurs : ";                      //
+   cin.ignore(numeric_limits<streamsize>::max(), '\n');  //ignore toutes les données entrées avant le retour à la ligne
+   cout << endl;                                         //fait un retour à la ligne
+   cin >> a;                                             //stock la valeur entré par l'utilisateur dans a
+   cin >> b;                                             //stock la valeur entré par l'utilisateur dans b
+   cin.ignore(numeric_limits<streamsize>::max(), '\n');  //ignore toutes les données entrées avant le retour à la ligne
+   cin >> x;                                             //stock la valeur entré par l'utilisateur dans x
+   cin >> y;                                             //stock la valeur entré par l'utilisateur dans y
+   cout << "voulez-vous sauver [o/n] : ";                
    cin >> s;
    cout << "sauver : " << s << endl;
    cin >> a;
