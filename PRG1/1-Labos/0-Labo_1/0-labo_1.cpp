@@ -28,11 +28,11 @@ int main() {
 
    cout << "Bonjour ce programe vous permet de commander dans le fameux restaurant de la green katze Corp&Co. \nVoici le prix des objets du menu\n================================" << endl;
 
-   cout << " - entree   : " << endl;
-   cout << " - Plat     : " << endl;
-   cout << " - Boisson  : " << endl;
-   cout << " - Dessert  : " << endl;
-   cout << " - Cafe     : " << endl;
+   cout << " - entree   : " << entree << endl;
+   cout << " - Plat     : " << platPrincipal << endl;
+   cout << " - Boisson  : " << boisson << endl;
+   cout << " - Dessert  : " << dessert << endl;
+   cout << " - Cafe     : " << cafe << endl;
 
 
    cout << "Presser ENTER pour quitter";
