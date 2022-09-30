@@ -12,9 +12,9 @@
 // Compilateur 
 //---------------------------------------------------------
 
-#include <cstdlib>      // EXIT_SUCCESS
-#include <iostream>     // cout et cin
-#include<limits>        //utilisé pour avoir les limites numériques (source: https://www.tutorialspoint.com/what-is-the-use-of-cin-ignore-in-cplusplus)
+#include    <cstdlib>      // EXIT_SUCCESS
+#include    <iostream>     // cout et cin
+#include    <limits>       //utilisé pour avoir les limites numériques (source: https://www.tutorialspoint.com/what-is-the-use-of-cin-ignore-in-cplusplus)
 
 using namespace std;
 
@@ -83,12 +83,12 @@ int main() {
       cout << "Votre ticket" << endl;
       cout << "============" << endl;
 
-      cout << " - " << nbrEntree    << "  entrees     : " << totalEntrees << endl;
-      cout << " - " << nbrPlat      << "  plats       : " << totalPlats << endl;
-      cout << " - " << nbrBoisson   << "  boissons    : " << totalBoissons << endl;
-      cout << " - " << nbrDessert   << "  desserts    : " << totalDesserts << endl;
-      cout << " - " << nbrCafe      << "  cafes       : " << totalCafes << endl;
-      cout << " -    total       : " << total << endl;
+      cout << " - " << nbrEntree          << "  entrees     : " << totalEntrees     << endl;
+      cout << " - " << nbrPlat            << "  plats       : " << totalPlats       << endl;
+      cout << " - " << nbrBoisson         << "  boissons    : " << totalBoissons    << endl;
+      cout << " - " << nbrDessert         << "  desserts    : " << totalDesserts    << endl;
+      cout << " - " << nbrCafe            << "  cafes       : " << totalCafes       << endl;
+      cout << " -    total       : "      << total                                  << endl;
 
       cout << "Merci de votre visite !" << endl;
       cout << "Presser ENTER pour quitter";
