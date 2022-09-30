@@ -19,24 +19,40 @@
 using namespace std;
 
 int main() {
-   //initialisation des prix des objets du menu
-   float entree         = 4.50f, 
-         platPrincipal  = 12.50f, 
-         boisson        = 3.00f, 
-         dessert        = 6.00f, 
-         cafe           = 2.90f;
+      //initialisation des prix des objets du menu
+      const float    ENTREE      = 4.50f, 
+                        PLAT        = 12.50f, 
+                        BOISSON     = 3.00f, 
+                        DESSERT     = 6.00f, 
+                        CAFE        = 2.90f;
 
-   cout << "Bonjour ce programe vous permet de commander dans le fameux restaurant de la green katze Corp&Co. \nVoici le prix des objets du menu\n================================" << endl;
+      cout << "Bonjour ce programe vous permet de commander dans le fameux restaurant de la green katze Corp&Co. \nVoici le prix des objets du menu\n================================" << endl;
 
-   cout << " - entree   : " << entree << endl;
-   cout << " - Plat     : " << platPrincipal << endl;
-   cout << " - Boisson  : " << boisson << endl;
-   cout << " - Dessert  : " << dessert << endl;
-   cout << " - Cafe     : " << cafe << endl;
+      cout << " - Entree   : " << ENTREE << endl;
+      cout << " - Plat     : " << PLAT << endl;
+      cout << " - Boisson  : " << BOISSON << endl;
+      cout << " - Dessert  : " << DESSERT << endl;
+      cout << " - Cafe     : " << CAFE << endl;
 
+      cout << "Votre commande" << endl;
+      cout << "==============" << endl;
+      cout << " - Nombre d'entree   : ";
+      cout << endl;
 
-   cout << "Presser ENTER pour quitter";
-   cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      cout << " - Nombre de plat    : ";
+      cout << endl;
 
-   return EXIT_SUCCESS;
+      cout << " - Nombre de boisson : ";
+      cout << endl;
+
+      cout << " - Nombre de dessert : ";
+      cout << endl;
+
+      cout << " - Nombre de cafe    : ";
+      cout << endl;
+
+      cout << "Presser ENTER pour quitter";
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+      return EXIT_SUCCESS;
 }
