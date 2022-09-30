@@ -20,11 +20,25 @@ using namespace std;
 
 int main() {
       //initialisation des prix des objets du menu
-      const float    ENTREE      = 4.50f, 
-                        PLAT        = 12.50f, 
-                        BOISSON     = 3.00f, 
-                        DESSERT     = 6.00f, 
-                        CAFE        = 2.90f;
+      const float ENTREE      = 4.50f, 
+                  PLAT        = 12.50f, 
+                  BOISSON     = 3.00f, 
+                  DESSERT     = 6.00f, 
+                  CAFE        = 2.90f;
+      
+      //initialisation des nombre de plat
+            int   nbrEntree   = 0,
+                  nbrPlat     = 0,
+                  nbrBoisson  = 0,
+                  nbrDessert  = 0,
+                  nbrCafe     = 0;
+            
+            float totalEntrees      = 0.0f,
+                  totalPlats        = 0.0f,
+                  totalBoissons     = 0.0f,
+                  totalDesserts     = 0.0f,
+                  totalCafes        = 0.0f,
+                  total             = 0.0f;
 
       cout << "Bonjour ce programe vous permet de commander dans le fameux restaurant de la green katze Corp&Co. \nVoici le prix des objets du menu\n================================" << endl;
 
@@ -36,21 +50,47 @@ int main() {
 
       cout << "Votre commande" << endl;
       cout << "==============" << endl;
+
       cout << " - Nombre d'entree   : ";
-      cout << endl;
+      cin >> nbrEntree;
 
       cout << " - Nombre de plat    : ";
-      cout << endl;
+      cin >> nbrPlat;
 
       cout << " - Nombre de boisson : ";
-      cout << endl;
+      cin >> nbrBoisson;
 
       cout << " - Nombre de dessert : ";
-      cout << endl;
+      cin >> nbrDessert;
 
       cout << " - Nombre de cafe    : ";
-      cout << endl;
+      cin >> nbrCafe;
 
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+      totalEntrees = float(nbrEntree*ENTREE);
+      total += totalEntrees;
+      totalPlats = float(nbrPlat*PLAT);
+      total += totalPlats;
+      totalBoissons = float(nbrBoisson*BOISSON);
+      total += totalBoissons;
+      totalDesserts = float(nbrDessert*DESSERT);
+      total += totalDesserts;
+      totalCafes = float(nbrCafe*CAFE);
+      total += totalCafes;
+
+
+      cout << "Votre ticket" << endl;
+      cout << "============" << endl;
+
+      cout << " - " << nbrEntree    << "  entrees     : " << totalEntrees << endl;
+      cout << " - " << nbrPlat      << "  plats       : " << totalPlats << endl;
+      cout << " - " << nbrBoisson   << "  boissons    : " << totalBoissons << endl;
+      cout << " - " << nbrDessert   << "  desserts    : " << totalDesserts << endl;
+      cout << " - " << nbrCafe      << "  cafes       : " << totalCafes << endl;
+      cout << " -    total       : " << total << endl;
+
+      cout << "Merci de votre visite !" << endl;
       cout << "Presser ENTER pour quitter";
       cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
