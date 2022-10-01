@@ -27,7 +27,7 @@ int main() {
                   CAFE        = 2.90f;
       
             //initialisation des nombre de plat
-            int   nbrEntree   = 0,
+            unsigned int   nbrEntree   = 0,
                   nbrPlat     = 0,
                   nbrBoisson  = 0,
                   nbrDessert  = 0,
