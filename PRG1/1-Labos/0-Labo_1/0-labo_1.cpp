@@ -27,11 +27,11 @@ int main() {
                   CAFE        = 2.90f;
       
             //initialisation des nombre de plat
-            unsigned int   nbrEntree   = 0,
-                  nbrPlat     = 0,
-                  nbrBoisson  = 0,
-                  nbrDessert  = 0,
-                  nbrCafe     = 0;
+            unsigned int      nbrEntree   = 0,
+                              nbrPlat     = 0,
+                              nbrBoisson  = 0,
+                              nbrDessert  = 0,
+                              nbrCafe     = 0;
             //initalisation du total des différents plats
             float totalEntrees      = 0.0f,
                   totalPlats        = 0.0f,
