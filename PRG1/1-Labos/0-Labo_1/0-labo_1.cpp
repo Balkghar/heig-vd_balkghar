@@ -26,13 +26,13 @@ int main() {
                   DESSERT     = 6.00f, 
                   CAFE        = 2.90f;
       
-      //initialisation des nombre de plat
+            //initialisation des nombre de plat
             int   nbrEntree   = 0,
                   nbrPlat     = 0,
                   nbrBoisson  = 0,
                   nbrDessert  = 0,
                   nbrCafe     = 0;
-            
+            //initalisation du total des différents plats
             float totalEntrees      = 0.0f,
                   totalPlats        = 0.0f,
                   totalBoissons     = 0.0f,
@@ -40,14 +40,16 @@ int main() {
                   totalCafes        = 0.0f,
                   total             = 0.0f;
 
+      //affichage du menu
       cout << "Bonjour ce programe vous permet de commander dans le fameux restaurant de la green katze Corp&Co. \nVoici le prix des objets du menu\n================================" << endl;
 
-      cout << " - Entree   : " << ENTREE << endl;
-      cout << " - Plat     : " << PLAT << endl;
+      cout << " - Entree   : " << ENTREE  << endl;
+      cout << " - Plat     : " << PLAT    << endl;
       cout << " - Boisson  : " << BOISSON << endl;
       cout << " - Dessert  : " << DESSERT << endl;
-      cout << " - Cafe     : " << CAFE << endl;
+      cout << " - Cafe     : " << CAFE    << endl;
 
+      //affichage et possibilité de commande pour l'utilisateur
       cout << "Votre commande" << endl;
       cout << "==============" << endl;
 
@@ -66,8 +68,10 @@ int main() {
       cout << " - Nombre de cafe    : ";
       cin >> nbrCafe;
 
+      //vide le buffer
       cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
+      //calcul du total
       totalEntrees = float(nbrEntree*ENTREE);
       total += totalEntrees;
       totalPlats = float(nbrPlat*PLAT);
@@ -80,6 +84,7 @@ int main() {
       total += totalCafes;
 
 
+      //Affichage du ticket et message de fin
       cout << "Votre ticket" << endl;
       cout << "============" << endl;
 
