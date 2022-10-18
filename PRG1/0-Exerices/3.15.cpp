@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : 3.13.cpp
+// Fichier      : 3.15.cpp
 // Auteur       : Hugo Germano
 // Date         : 17.10.2022
 
-// But          : Exercice 
+// But          : Exercice 3.15
 //
 // Remarque     : 
 //

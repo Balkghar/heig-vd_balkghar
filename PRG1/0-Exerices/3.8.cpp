@@ -21,9 +21,9 @@
 using namespace std;
 int main() {
    //déclaration de constantes
-   const char* jourParMois[12] = {
+   /*const char* jourParMois[12] = {
       "31","28 ou 29", "31", "30", "31","30","31","31", "30","31","30","31"
-   };
+   };*/
 
    //déclaration des variables
    int numberOfTheMonth;
@@ -31,9 +31,12 @@ int main() {
    cout << "Entrez un no de mois (1-12) : ";
    cin >> numberOfTheMonth;
    VIDER_BUFFER;
+   (numberOfTheMonth==1 || numberOfTheMonth==3 || numberOfTheMonth==5 || numberOfTheMonth==7 || numberOfTheMonth==8 || numberOfTheMonth==10 || numberOfTheMonth==12) ? (cout << "Ce mois comporte 31 jours") 
+      : (numberOfTheMonth==2) ? cout << "Ce mois comporte 28 ou 29 jours"
+         : (cout << "Ce mois comporte 30 jours");
 
-   cout << "Ce mois comporte " << jourParMois[numberOfTheMonth-1] << " jours." << endl;
-   
+   //cout << "Ce mois comporte " << jourParMois[numberOfTheMonth-1] << " jours." << endl;
+   cout << endl;
 
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
