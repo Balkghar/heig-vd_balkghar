@@ -20,11 +20,6 @@
 
 using namespace std;
 int main() {
-   //déclaration de constantes
-   /*const char* jourParMois[12] = {
-      "31","28 ou 29", "31", "30", "31","30","31","31", "30","31","30","31"
-   };*/
-
    //déclaration des variables
    int numberOfTheMonth;
    

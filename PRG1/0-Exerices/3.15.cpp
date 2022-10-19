@@ -24,7 +24,7 @@ int main() {
 
 
    //déclaration des variables
-   enum mois{janvier=31,fevrier=28,mars=31,avril=30,mai=31,juin=30,juillet=31,aout=31,septembre=30,octobre=31,novembre=30, decembre=31};
+   enum mois{janvier=1,fevrier,mars,avril,mai,juin,juillet,aout,septembre,octobre,novembre, decembre};
    int numberOfTheMonth;
 
 
@@ -35,46 +35,27 @@ int main() {
 
    cout << "Ce mois comporte ";
 
-   switch (numberOfTheMonth)
+   switch ((mois) numberOfTheMonth)
    {
-   case 1:
-      cout << janvier;
-      break;
-   case 2:
-      cout << fevrier << " ou " << fevrier+1;
-      break;
-   case 3:
-      cout << mars;
-      break;
-   case 4:
-      cout << avril;
-      break;
-   case 5:
-      cout << mai;
-      break;
-   case 6:
-      cout << juin;
-      break;
-   case 7:
-      cout << juillet;
-      break;
-   case 8:
-      cout << aout;
-      break;
-   case 9:
-      cout << septembre;
-      break;
-   case 10:
-      cout << octobre;
-      break;
-   case 11:
-      cout << novembre;
-      break;
-   case 12:
-      cout << decembre;
-      break;
+      case mois::janvier:
+      case mois::mars:
+      case mois::mai:
+      case mois::juillet:
+      case mois::aout:
+      case mois::octobre:
+      case mois::decembre:
+         cout <<"ce mois comporte 31 jours"<< endl;
+         break;
+      case mois::fevrier:
+         cout <<"ce mois comporte 28 ou 29 jours"<< endl;
+         break;
+      case mois::avril:
+      case mois::juin:
+      case mois::septembre:
+      case mois::novembre:
+         cout << "ce mois comporte 30 jours" <<endl;
+         break;
    }
-   cout << " jours" << endl;
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès

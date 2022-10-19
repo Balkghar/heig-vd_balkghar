@@ -21,9 +21,7 @@ Solution https://openclassrooms.com/forum/sujet/vider-le-buffer-de-scanf-90403
 void viderBuffer(void){
   int c;
   while((c=getchar()) != EOF && c != '\n');
- 
 }
-
 int main() {
    //déclaration des variables
    int premier, second, troisieme;
