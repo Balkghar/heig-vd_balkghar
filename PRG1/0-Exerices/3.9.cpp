@@ -15,6 +15,7 @@
 #include <cstdlib>
 #include <iostream>
 
+using namespace std;
 /*
 Solution https://openclassrooms.com/forum/sujet/vider-le-buffer-de-scanf-90403
 */
@@ -27,7 +28,6 @@ int main() {
    int premier, second, troisieme;
    int plusPetit;
    char vide;
-
    printf("Entrez une valeur : ");
    scanf("%d",&premier);
    viderBuffer();
