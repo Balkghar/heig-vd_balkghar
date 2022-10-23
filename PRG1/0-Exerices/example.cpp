@@ -21,9 +21,13 @@
 
 using namespace std;
 int main() {
+
+   //déclaration des constantes
+   const int DECIMALES = 2;
+
+
+   cout << fixed << setprecision(DECIMALES);
    
-
-
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès
