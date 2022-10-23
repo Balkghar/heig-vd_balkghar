@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : 3.28.cpp
+// Fichier      : 3.29.cpp
 // Auteur       : Hugo Germano
 // Date         : 23.10.2022
 
-// But          : Exercice 3.28
+// But          : Exercice 3.29
 //
 // Remarque     : 
 //
@@ -23,20 +23,29 @@ using namespace std;
 int main() {
    //déclaration des constantes
    const int DECIMALES = 2;
+
    //déclaration des variables
    int n;
-   double reponse = 1;
+   int m;
+   int i;
+
+   cout << fixed << setprecision(DECIMALES);
 
    do{
-      cout << "Veuillez entrer n : ";
-      cin >> n;
+      cout << "Veuillez entrer deux chiffres, séparé par un espace : ";
+      cin >>n;
+      cin >>m;
       VIDER_BUFFER;
-   }while(n < 0);
-   for (int i = 2; i <= n; ++i){
-      reponse = reponse + 1/double(i);
-   }
-   cout << fixed << setprecision(DECIMALES) << "La somme des " << n << " premiers termes de la serie harmonique vaut " << reponse << endl;
+   }while(n < 0 && m < 0);
    
+   if(n < m){i = m;}else{i = n;}
+
+   while(i%n!=0 || i%m!=0){
+      i++;
+   }
+   
+   cout << "Le plus petit multiple commun de "<< n << " et "<< m <<" est " << i << endl;
+
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès
