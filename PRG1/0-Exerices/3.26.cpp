@@ -25,13 +25,13 @@ int main() {
 
    //déclaration des constantes
    const int DECIMALES = 2;
-   const string etoile = "*";
+   const string etoile = "**";
 
 
    //déclaration des variables
    int hauteurTriangle;
    int compteEtoile = 1;
-   string etoiles = "";
+   string etoiles = "*";
    int largeur;
 
 
@@ -53,12 +53,8 @@ int main() {
    largeur = hauteurTriangle;
 
    for(int i = 0; i < hauteurTriangle; ++i){
-      etoiles = "";
-      for(int i = 0; i < compteEtoile; ++i){
-         etoiles.append(etoile);
-      }
-
       cout << setw(largeur) << etoiles << endl;
+      etoiles.append(etoile);
       ++largeur;
       compteEtoile += 2;
    }
