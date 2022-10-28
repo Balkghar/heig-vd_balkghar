@@ -5,7 +5,7 @@
 
 // But          : Exercice 3.32
 //
-// Remarque     : 
+// Remarque     :
 //
 // Modifs       :
 //
@@ -27,16 +27,17 @@ int main() {
    const int DECIMALES = 2;
 
    //déclaration des variables
-   int n, m=0;
+   int n, m=0;	//n = nombre de flechette / m = nombre de flechette qui ont touché la cible
    double pi;
    double x;
    double y;
-   double longueur;
+   double longueur; //longueur du triangle  x y
    do {
       cout << "Rentrez le nombre de fléchète que vous voulez lancer : ";
       cin >> n;
-   }while(n < 1);
+   }while(n < 1);//demande le nombre de fléchette à l'utilisateur jusqu'il rentre un nombre au dessus de 1
 
+   //simulation du lanché de fléchette
    for(int i = 0; i < n; ++i){
       x = RANDOM;
       y = RANDOM;
@@ -45,12 +46,12 @@ int main() {
          ++m;
       }
    }
-
+   //calcul de pi
    pi = 4*(double(m)/n);
 
-
+   //affichage de pi
    cout << fixed << setprecision(DECIMALES) << "Pi s'approche de " << pi << endl;
-   
+
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès
