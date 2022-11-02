@@ -25,10 +25,9 @@ int intlog(double base, double x) {
     return (int)(log(x) / log(base));
 }
 int main() {
-   //déclaration des constantes
-   const double interet = 1.05;
 
    //déclaration des variables
+   double interet;
    int capital;
    double newCapital;
    int i = 0;
@@ -37,6 +36,9 @@ int main() {
    cin >> capital;
    VIDER_BUFFER;
    newCapital = capital;
+   cout << "Veuillez entrer votre interet : ";
+   cin >> interet;
+   VIDER_BUFFER;
 
    while (newCapital <= (capital*2))
    {

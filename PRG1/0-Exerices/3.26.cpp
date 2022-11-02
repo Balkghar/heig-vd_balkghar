@@ -42,12 +42,12 @@ int main() {
    cin >> hauteurTriangle;
    VIDER_BUFFER;
 
-   if(hauteurTriangle <= 0){
+   if(hauteurTriangle < 0){
       do{
          cout << "Veuillez entrer l'hauteur du triangle, positif cette fois ;) : ";
          cin >> hauteurTriangle;
          VIDER_BUFFER;
-      }while(hauteurTriangle <= 0);
+      }while(hauteurTriangle < 0);
    }
 
    largeur = hauteurTriangle;

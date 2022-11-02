@@ -32,9 +32,11 @@ int main() {
    double x;
    double y;
    double longueur; //longueur du triangle  x y
+   
    do {
       cout << "Rentrez le nombre de fléchète que vous voulez lancer : ";
       cin >> n;
+      VIDER_BUFFER;
    }while(n < 1);//demande le nombre de fléchette à l'utilisateur jusqu'il rentre un nombre au dessus de 1
 
    //simulation du lanché de fléchette

@@ -54,7 +54,7 @@ int main() {
         d = 2;
     }
     else{
-         cout << setw(d) << i ;
+         cout << setw(d) << i;
          d +=2;
     }
     i--;

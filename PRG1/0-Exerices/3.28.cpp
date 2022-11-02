@@ -33,7 +33,7 @@ int main() {
       VIDER_BUFFER;
    }while(n < 0);
    for (int i = 2; i <= n; ++i){
-      reponse = reponse + 1/double(i);
+      reponse = reponse + 1.0/i;
    }
    cout << fixed << setprecision(DECIMALES) << "La somme des " << n << " premiers termes de la serie harmonique vaut " << reponse << endl;
    
