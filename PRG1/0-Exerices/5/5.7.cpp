@@ -26,14 +26,15 @@ void remplacerNombrePair(int tab[], size_t taille, int nouvelleValeur);
 int main() {
    const int CAPACITE = 10;
    
+   size_t taille = CAPACITE;
    int tab[CAPACITE] = {1,4,6,3,9,6,3,1,8,6};
    int nouvelleValeur = 100;
 
    cout << "Avant remplacement : ";
-   afficherTableau(tab, CAPACITE);
-   remplacerNombrePair(tab,CAPACITE, nouvelleValeur);
+   afficherTableau(tab, taille);
+   remplacerNombrePair(tab,taille, nouvelleValeur);
    cout << "Après remplacement : ";
-   afficherTableau(tab, CAPACITE);
+   afficherTableau(tab, taille);
    
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
@@ -46,7 +47,7 @@ int main() {
 // param       tab[]          le tableau à afficher
 // param       TAILLE         la taille du tableau
 // exception   n/a
-void afficherTableau(const int tab[], size_t TAILLE){
+void afficherTableau(const int tab[], const size_t TAILLE){
    cout << "[";
    for(int i = 0; i< TAILLE; ++i){
       if(i){cout << ",";}
@@ -61,7 +62,7 @@ void afficherTableau(const int tab[], size_t TAILLE){
 // param       taille         la taille du tableau
 // param       nouvelleValeur la valeur qui va remplacer toutes les nombres pairs
 // exception   n/a
-void remplacerNombrePair(int tab[], size_t TAILLE, int nouvelleValeur){
+void remplacerNombrePair(int tab[], const size_t TAILLE, int nouvelleValeur){
    for(int i = 0; i < TAILLE; ++i){
       if(tab[i]%2 == 0){
          tab[i]= nouvelleValeur;
