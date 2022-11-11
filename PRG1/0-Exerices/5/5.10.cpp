@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : 5.9.cpp
+// Fichier      : 5.10.cpp
 // Auteur       : Hugo Germano
-// Date         : 10.11.2022
+// Date         : 11.11.2022
 
-// But          : Exercice 5.9
+// But          : Exercice  5.10
 //
 // Remarque     : 
 //
@@ -21,31 +21,28 @@
 using namespace std;
 
 void afficherTableau(const int tab[], const size_t TAILLE);
-void supprimerCaseCentre(int tab[], size_t& taille);
-void decalerCaseGauche(int tab[], size_t& taille, size_t depart, int decalage);
+bool tableauEstCroissant(const int tab[], const size_t TAILLE);
 
 int main() {
+
    const int CAPACITE = 11;
    
    size_t taille = CAPACITE;
-   int tab[CAPACITE] = {1,4,6,3,9,6,3,1,8,6};
+   int tab[CAPACITE] = {1,2,3,4,5,6,7,8,9,10,11};
+   
+   cout << "Tableau : ";
+   afficherTableau(tab, taille);
 
-
-
-   cout << "Avant suppression : ";
-   afficherTableau(tab , taille);
-
-   supprimerCaseCentre(tab , taille);
-
-   cout << "Après suppression : ";
-   afficherTableau(tab , taille);
-
+   if(tableauEstCroissant(tab, taille)){
+      cout << "Tableau strictement croissant" << endl;
+   } else {
+      cout << "Tableau non strictement croissant" << endl;
+   }
 
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès
 }
-
 void afficherTableau(const int tab[], const size_t TAILLE){
    cout << "[";
    for(int i = 0; i< TAILLE; ++i){
@@ -54,19 +51,14 @@ void afficherTableau(const int tab[], const size_t TAILLE){
    }
    cout << "]" << endl;
 }
-void supprimerCaseCentre(int tab[], size_t& taille){
-   const bool pair = taille % 2 ? false : true ;
-   if(pair){
-      int depart=  (taille/2)-1;
-      decalerCaseGauche(tab,taille,depart,2);
-   } else {
-      int depart=  (taille/2);
-      decalerCaseGauche(tab,taille,depart,1);
+bool tableauEstCroissant(const int tab[], const size_t TAILLE){
+   if(TAILLE == 1 || TAILLE == 0){
+      return true;
    }
-}
-void decalerCaseGauche(int tab[], size_t& taille, size_t depart, int decalage){
-   for(int i = depart; i < taille-decalage; ++i){
-      tab[i] = tab[i+decalage];
+   for(int i = 0; i < TAILLE-1; ++i){
+      if(tab[i] > tab[i+1] ){
+         return false;
+      }
    }
-   taille -= decalage;
+   return true;
 }

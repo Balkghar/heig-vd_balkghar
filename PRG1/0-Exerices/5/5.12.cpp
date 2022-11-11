@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : example.cpp
+// Fichier      : 5.12.cpp
 // Auteur       : Hugo Germano
-// Date         : dd.MM.yyyy
+// Date         : 11.11.2022
 
-// But          : Exercice 
+// But          : Exercice 5.12
 //
 // Remarque     : 
 //
@@ -21,12 +21,7 @@
 using namespace std;
 
 int main() {
-
-   //déclaration des constantes
-   const int DECIMALES = 2;
-
-
-   cout << fixed << setprecision(DECIMALES);
+   
    
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
