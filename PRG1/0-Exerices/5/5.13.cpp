@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : 5.12.cpp
+// Fichier      : 5.13.cpp
 // Auteur       : Hugo Germano
-// Date         : 11.11.2022
+// Date         : 12.11.2022
 
-// But          : Exercice 5.12
+// But          : Exercice 5.13
 //
 // Remarque     : 
 //
@@ -20,33 +20,28 @@
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
 
-void supprimerValeurDansTableau(int tab[], size_t& taille, int elementASupprimer);
 void afficherTableau(const int tab[], const size_t TAILLE);
 void decalerCaseGauche(int tab[], size_t& taille, size_t depart, int decalage);
+void supprimerDoublonTableau(int tab[], size_t& taille);
 int main() {
    const int CAPACITE = 11;
    
    size_t taille = CAPACITE;
-   int tab[CAPACITE] = {1,2,3,4,3,6,3,8,9,3,11};
-
-   cout << "Avant suppression  : ";
-   afficherTableau(tab,taille);
-   supprimerValeurDansTableau(tab,taille, 3);
-
-
-   cout << "Après suppressions : ";
-   afficherTableau(tab,taille);
+   int tab[CAPACITE] = {9,2,3,2,6,6,3,8,9,8,11};
    
+
+   cout << "Avant modification : ";
+   afficherTableau(tab,taille);
+
+   supprimerDoublonTableau(tab, taille);
+
+   cout << "Après modification : ";
+   afficherTableau(tab,taille);
+
+
    cout << "Entrez ENTER pour quitter.";
    VIDER_BUFFER;
    return EXIT_SUCCESS;                                  //retourne un code de succès
-}
-void supprimerValeurDansTableau(int tab[], size_t& taille, int elementASupprimer){
-   for (int i = 0; i < taille; i++){
-      if(tab[i] == elementASupprimer){
-         decalerCaseGauche(tab, taille, i, 1);
-      }
-   }
 }
 void afficherTableau(const int tab[], const size_t TAILLE){
    cout << "[";
@@ -61,4 +56,14 @@ void decalerCaseGauche(int tab[], size_t& taille, size_t depart, int decalage){
       tab[i] = tab[i+decalage];
    }
    taille -= decalage;
+}
+void supprimerDoublonTableau(int tab[], size_t& taille){
+   for(int i = 0; i < taille; ++i){
+      for(int j = i+1; j < taille; ++j){
+         if(tab[i] == tab[j]){
+            decalerCaseGauche(tab, taille, j, 1);
+         }
+      }
+   }
+
 }
