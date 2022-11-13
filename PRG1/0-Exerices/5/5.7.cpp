@@ -56,7 +56,7 @@ void afficherTableau(const int tab[], const size_t TAILLE){
    cout << "]" << endl;
 }
 // nom         remplacerNombrePair
-// but         remplace tous les nombre par d'un tableau avec une valeur donnée
+// but         remplace tous les nombre pairr d'un tableau avec une valeur donnée
 //             
 // param       tab[]          le tableau à modifier
 // param       taille         la taille du tableau
