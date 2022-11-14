@@ -31,10 +31,10 @@ int main() {
    size_t taille = CAPACITE;
    int tab[CAPACITE] = {1,2,3,4,5,6,7,8,9,10};
    size_t taille2 = CAPACITE2;
-   int tab2[CAPACITE2] = {1,2,3,4,5,6,7,8,9,10,11};
+   int tab2[CAPACITE2] = {1,2,3,4,5,6,7,8,9,10,1};
 
 
-   if((tableauxSontEgaux(tab, tab2, taille, taille2) && tableauxSontEgaux(tab2, tab, taille2, taille))){
+   if((tableauxSontEgaux(tab, tab2, taille, taille2))){
       cout << "Les tableaux sont égaux !" << endl;
    }
    else{
@@ -56,6 +56,11 @@ void afficherTableau(const int tab[], const size_t TAILLE){
 bool tableauxSontEgaux(int tab1[], int tab2[], const size_t TAILLE1, const size_t TAILLE2){
    for(int i = 0; i < TAILLE1; ++i){
       if(valeurEstDansTableau(tab2, TAILLE2, tab1[i]) == false){
+         return false;
+      }
+   }
+   for(int i = 0; i < TAILLE2; ++i){
+      if(valeurEstDansTableau(tab1, TAILLE2, tab2[i]) == false){
          return false;
       }
    }
