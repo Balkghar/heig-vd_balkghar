@@ -24,10 +24,10 @@ void afficherTableau(const int tab[], const size_t TAILLE);
 void decalerCaseGauche(int tab[], size_t& taille, size_t depart, int decalage);
 void supprimerDoublonTableau(int tab[], size_t& taille);
 int main() {
-   const int CAPACITE = 11;
+   const int CAPACITE = 13;
    
    size_t taille = CAPACITE;
-   int tab[CAPACITE] = {9,2,3,2,6,6,3,8,9,8,11};
+   int tab[CAPACITE] = {9,2,3,2,6,6,6,6,3,8,9,8,11};
    
 
    cout << "Avant modification : ";
@@ -62,8 +62,8 @@ void supprimerDoublonTableau(int tab[], size_t& taille){
       for(int j = i+1; j < taille; ++j){
          if(tab[i] == tab[j]){
             decalerCaseGauche(tab, taille, j, 1);
+            --j;
          }
       }
    }
-
 }
