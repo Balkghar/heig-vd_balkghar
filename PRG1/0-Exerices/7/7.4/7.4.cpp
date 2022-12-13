@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier      : example.cpp
+// Fichier      : 7.4.cpp
 // Auteur       : Hugo Germano
 // Date         : dd.MM.yyyy
 
-// But          : Exercice 
+// But          : Exercice 7.4
 //
 // Remarque     : 
 //
@@ -16,28 +16,22 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
-#include <vector>
+#include "7.4-robot.hpp" 
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
 using namespace std;
 
-
-int somme(const vector<vector<int>>& vect, int posLigne, int posColonne){
-
-   int somme = 0;
-
-   
-}
-
 int main() {
 
-   const vector<vector<int>> vect = 
-   {
-      {1,2,3,4},
-      {5,6,7,8},
-      {9,1,2,3}
-   };
+   Robot r(15);
 
+   cout << "La position du robot est à : " << r.getPosition() << endl;
+
+   r.faireDemiTour();
+
+   r.deplacer(10);
+
+   cout << "La position du robot est à : " << r.getPosition() << endl;
 
 
    cout << "Entrez ENTER pour quitter.";

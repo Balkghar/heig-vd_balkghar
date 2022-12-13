@@ -1,5 +1,5 @@
 //---------------------------------------------------------
-// Fichier      : example.cpp
+// Fichier      : 7.1.cpp
 // Auteur       : Hugo Germano
 // Date         : dd.MM.yyyy
 
@@ -16,28 +16,23 @@
 #include <iostream>     // cout et cin
 #include <iomanip>
 #include <limits>       // numeric_limits<streamsize>
-#include <vector>
+#include "7.1-point.hpp"
+
 
 #define VIDER_BUFFER cin.ignore(numeric_limits<streamsize>::max(),'\n')
+
 using namespace std;
-
-
-int somme(const vector<vector<int>>& vect, int posLigne, int posColonne){
-
-   int somme = 0;
-
-   
-}
 
 int main() {
 
-   const vector<vector<int>> vect = 
-   {
-      {1,2,3,4},
-      {5,6,7,8},
-      {9,1,2,3}
-   };
+   Point p(2.3,2.4);
 
+   cout << "Coordonées du point : (" << p.abscisse() << "," << p.ordonnee() << ")" << endl;
+
+   p.deplacementPoint(1.0, 2.0);
+
+
+   cout << "Coordonées du point : (" << p.abscisse() << "," << p.ordonnee() << ")" << endl;
 
 
    cout << "Entrez ENTER pour quitter.";

@@ -38,7 +38,7 @@ int main() {
    string b(1, nom.at(0));
    string c(1, toupper(nom.at(nom.size()-1)));
 
-   acro = a + b +c ;
+   acro = a + b + c ;
 
    cout << "Votre acronyme est : " << acro << endl;
 
