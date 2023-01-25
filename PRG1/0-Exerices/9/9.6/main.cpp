@@ -39,7 +39,6 @@ class Personne {
         catch(const invalid_argument& e)
         {        
             cout << "Exception survenue dans Personne::Personne()." << endl;
-            //throw invalid_argument(e.what());
         }
         
     private:
