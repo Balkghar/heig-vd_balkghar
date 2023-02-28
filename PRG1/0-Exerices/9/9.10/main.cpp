@@ -1,7 +1,13 @@
 #include <iostream>
 
-
-
+class exception_hgo {
+    public:
+        exception_hgo() noexcept;
+        exception_hgo(const exception_hgo&) noexcept;
+        exception_hgo& operator=(const exception_hgo&) noexcept;
+        virtual ~exception_hgo();
+        virtual const char* what() const noexcept;
+};
 
 int sommeNPremiersEntiers(int n);
 
@@ -17,7 +23,7 @@ int sommeNPremiersEntiers(int n){
 
     try{
         if(n < 0){
-            throw invalid_argument( "VALEUR NEGATIVE, TU ES STUPIDE !!!!!!!!!!!" ); 
+            //throw exception_hgo("patate");
         }
         int somme = 0;
         for(int i = 1 ; i <= n ; ++i){

@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "bitset": "cpp",
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "numeric": "cpp"
+    }
+}
