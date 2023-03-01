@@ -23,6 +23,6 @@ int combienDeCarreAuTotalRec(int n){
    }
 }
 int main(){
-   std::cout << combienDeCarreAuTotalRec(4);
-   std::cout << combienDeCarreAuTotalIter(4);
+   std::cout << combienDeCarreAuTotalRec(4) << std::endl;
+   std::cout << combienDeCarreAuTotalIter(4)<< std::endl;
 }

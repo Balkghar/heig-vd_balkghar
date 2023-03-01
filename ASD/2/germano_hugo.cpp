@@ -1,5 +1,5 @@
 //---------------------------------------------------------
-// Fichier        : 02_Hanoi_donnee.cpp
+// Fichier        : germano_hugo.cpp
 // Version        : 02 - 2022-03-08
 // Auteur(s)      : BREGUET Guy-Michel, Germano Hugo
 // But            : algorithme des tours de Hanoi (récursif)
@@ -73,12 +73,30 @@ ostream& operator<< (ostream& os, const Tours& tours) {
       os << "T" << ++n << " " << t << endl;
    return os;
 }
-
 //------------------------------------------------------
 void transfert(Tour& from, Tour& via, Tour& to, size_t n) {
+   if(n > 1){
+      transfert(from,  to, via, n-1);
+      to.push_back(from.back());
+      from.resize(from.size()-1);
 
-   
+      cout << "T1 "<< from << endl 
+      << "T2 " << via << endl 
+      << "T3 " << to << endl << endl;
 
+      nbreAppels++;
+      transfert(via,  from, to, n-1);
+   }
+   else if(n == 1){
+      to.push_back(from.back());
+      from.resize(from.size()-1);
+
+      cout << "T1 "<< from << endl 
+      << "T2 " << via << endl 
+      << "T3 " << to << endl << endl;
+      
+      nbreAppels++;
+   }
 }
 
 
