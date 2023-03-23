@@ -9,7 +9,7 @@ int main(void)
 
    printf("%X\n",n);
 
-   printf("%+07d\n",n); // pas réussi ⚠️
+   printf("%+07d\n",n); // TODO pas réussi ⚠️
 
    printf("%.3e\n",x);
 
